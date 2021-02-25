@@ -1,0 +1,21 @@
+customHeaders:
+- pattern: '**/*.woff'
+  headers:
+    - key: 'Access-Control-Allow-Origin'
+      value: 'https://www.mydomain.name'
+    - key: 'Access-Control-Allow-Credentials'
+      value: 'true'
+    - key: 'Access-Control-Allow-Methods'
+      value: 'GET, HEAD'
+- pattern: '**/*.woff2'
+  headers:
+    - key: 'Access-Control-Allow-Origin'
+      value: 'https://www.mydomain.name'
+    - key: 'Access-Control-Allow-Credentials'
+      value: 'true'
+    - key: 'Access-Control-Allow-Methods'
+      value: 'GET, HEAD'
+- pattern: '**/*'
+  headers:
+    - key: 'X-Robots-Tag'
+      value: 'noindex'
