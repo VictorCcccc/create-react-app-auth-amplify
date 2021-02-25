@@ -1,5 +1,5 @@
 customHeaders:
-- pattern: '**/*.woff'
+- pattern: '**/*.js'
   headers:
     - key: 'Access-Control-Allow-Origin'
       value: 'https://www.mydomain.name'
