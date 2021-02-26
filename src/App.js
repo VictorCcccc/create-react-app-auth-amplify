@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
-import aws_exports from './aws-exports';
-Amplify.configure(aws_exports);
+// import aws_exports from './aws-exports';
+// Amplify.configure(aws_exports);
 
 class App extends Component {
   render() {
@@ -14,6 +14,15 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <p style={{fontFamily: "OpenSans-Bold"}}>
+           Test Bold
+          </p>
+          <p style={{fontFamily: "OpenSans-Regular"}}>
+           Test Regular
+          </p>
+          <p style={{fontFamily: "OpenSans-Italic"}}>
+           Test Italic
           </p>
           <a
             className="App-link"
@@ -29,4 +38,5 @@ class App extends Component {
   }
 }
 
-export default withAuthenticator(App, true);
+export default App;
+// export default withAuthenticator(App, true);
