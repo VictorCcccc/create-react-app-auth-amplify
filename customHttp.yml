@@ -1,21 +1,28 @@
 customHeaders:
-- pattern: '**/*.woff'
+- pattern: "**/*"
   headers:
-    - key: 'Access-Control-Allow-Origin'
-      value: 'https://www.mydomain.name'
-    - key: 'Access-Control-Allow-Credentials'
-      value: 'true'
-    - key: 'Access-Control-Allow-Methods'
-      value: 'GET, HEAD'
-- pattern: '**/*.woff2'
+  - key: Strict-Transport-Security
+    value: max-age=63072000; includeSubDomains; preload
+  - key: X-Frame-Options
+    value: SAMEORIGIN
+  - key: X-Content-Type-Options
+    value: nosniff
+  - key: Referrer-Policy
+    value: same-origin
+  - key: Feature-Policy
+    value: accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera
+      'none'; encrypted-media 'none'; focus-without-user-activation 'none'; fullscreen
+      'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone
+      'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'none';
+      sync-xhr 'none'; usb  'none'; vr 'none';
+  - key: Permissions-Policy
+    value: accelerometer=(); ambient-light-sensor=(); autoplay=(); camera=(); encrypted-media=();
+      focus-without-user-activation=(); fullscreen=(); geolocation=(); gyroscope=();
+      magnetometer=(); microphone=(); midi=(); payment=(); picture-in-picture=();
+      speaker=(); sync-xhr=(); usb =(); vr=();
+- pattern: "**/*.json"
   headers:
-    - key: 'Access-Control-Allow-Origin'
-      value: 'https://www.mydomain.name'
-    - key: 'Access-Control-Allow-Credentials'
-      value: 'true'
-    - key: 'Access-Control-Allow-Methods'
-      value: 'GET, HEAD'
-- pattern: '**/*'
-  headers:
-    - key: 'X-Robots-Tag'
-      value: 'noindex'
+  - key: Access-Control-Allow-Origin
+    value: "*"
+  - key: Cache-Control
+    value: max-age=0, s-maxage=0, no-store, no-cache
